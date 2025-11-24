@@ -1,9 +1,12 @@
-﻿namespace ManoVecinaAPI.DTOs.Auth;
+using ManoVecinaAPI.Models;
 
-public record RegisterRequestDto(
-    string Name,
-    string Email,
-    string Password,
-    string Role,
-    string? AdminKey
-);
+namespace ManoVecinaAPI.DTOs.Auth;
+
+public class RegisterRequestDto
+{
+    public string Name { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public UserRole Role { get; set; } = UserRole.Client;
+    public string? Phone { get; set; }
+}

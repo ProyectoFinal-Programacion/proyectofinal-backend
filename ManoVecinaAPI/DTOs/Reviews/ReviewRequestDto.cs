@@ -1,9 +1,9 @@
-﻿namespace ManoVecinaAPI.DTOs.Reviews;
+namespace ManoVecinaAPI.DTOs.Reviews;
 
-public record ReviewRequestDto(
-    int OrderId,
-    int FromUserId,
-    int ToUserId,
-    int Rating,
-    string Comment
-);
+public class ReviewRequestDto
+{
+    public int OrderId { get; set; }
+    public int ToUserId { get; set; }
+    public int Rating { get; set; }
+    public string? Comment { get; set; }
+}
